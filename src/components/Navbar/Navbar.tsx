@@ -12,11 +12,11 @@ const Navbar: React.FC = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
   return (
-    <nav className={`shadow-md py-4 px-4 ${theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'}`}>
-     <div className="flex  mx-auto flex justify-between px-4 items-center sm:px-8">
-     <div className={`text-3xl flex items-center items-center gap-2 font-bold bg-gradient-to-l ${theme === 'dark' ? 'from-blue-200 to-cyan-200' : 'from-blue-500 to-cyan-500'} text-transparent bg-clip-text hover:underline decoration-blue-300 decoration-2 cursor-pointer`} >
+    <nav className={`shadow-md py-4 px-4 ${theme === 'dark' ? 'bg-lightBackground' : 'bg-gray-300'}`}>
+     <div className="flex  mx-auto justify-between px-4 items-center sm:px-8">
+     <div className={`text-3xl flex items-center  gap-2 font-bold  ${theme === 'dark' ? 'bg-gray-100' : 'from-blue-500 to-cyan-500'} text-transparent bg-clip-text decoration-blue-300 cursor-pointer`} >
       <img src="./logo1.png" alt="logo"  className='w-12 h-12 rounded-full ' />
-        <Link to="/">Animation </Link>
+        <Link to="/"  className={` ${theme === 'dark' ? 'text-gray-100' : 'text-buttonBackground'}`}>Animation </Link>
       </div>
       <div className="md:hidden">
           <button onClick={toggleMenu} className="text-white focus:outline-none">
@@ -41,13 +41,13 @@ const Navbar: React.FC = () => {
       </button>
         <Link
           to="/login"
-          className={`px-4 py-2 rounded-lg text-md  text-gray-800 font-semibold bg-gradient-to-l ${theme === 'dark' ? 'from-blue-200 to-cyan-200' : 'from-blue-400 to-cyan-400'}  hover:bg-blue-50`}
+          className={`px-4 py-2 rounded-lg text-md  text-gray-100 font-semibold  ${theme === 'dark' ? 'bg-buttonBackground' : 'bg-buttonBackground'}  hover:bg-backgroundColor`}
         >
           Login
         </Link>
         <Link
           to="/signup"
-          className={`px-4 py-2 rounded-lg text-md text-gray-800 font-semibold bg-gradient-to-l ${theme === 'dark' ? 'from-blue-200 to-cyan-200' : 'from-blue-400 to-cyan-400'}  hover:bg-blue-700`}
+          className={`px-4 py-2 rounded-lg text-md text-gray-100 font-semibold  ${theme === 'dark' ? 'bg-buttonBackground' : 'bg-buttonBackground'}  hover:bg-backgroundColor`}
         >
           Signup
         </Link>
