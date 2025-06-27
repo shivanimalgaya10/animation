@@ -1,0 +1,1 @@
+export { default as CommonCardImage } from './CommonCardImage';
