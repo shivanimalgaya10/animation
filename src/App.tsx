@@ -7,15 +7,23 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import Cards from './views/Cards/Cards';
 import { Front } from './views/Front';
 import CardImage from './views/CardImage/CardImage';
+import Layout from './views/Layout';
+import { Services } from './views/Services';
+import { ThemeProvider } from './context/ThemeContext';
+
 
 function App() {
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Home />,
+      element: <Layout />,
       errorElement:<ErrorBoundary/>,
       children:[
+        {
+          index: true,
+          element: <Home />
+        },
         {
           path: 'signup',
           element: <Signup/>,
@@ -33,16 +41,21 @@ function App() {
           element: <Front/>,
         },
         {
+          path: 'services',
+          element: <Services/>,
+        },
+        {
           path: 'card-image',
           element: <CardImage/>,
         },
       ]
     },
-   
   ]);
   
 
-  return  <RouterProvider router={router} />;
+  return <ThemeProvider>
+     <RouterProvider router={router} />
+  </ThemeProvider>;
 }
 
 export default App

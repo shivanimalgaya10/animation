@@ -3,7 +3,7 @@ import { CommonCardImage } from "../../components/CommonCardImage";
 
 const CardImage = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-[400px]">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div className="h-full">
         <CommonCardImage
           imgSrc="https://images.pexels.com/photos/5244025/pexels-photo-5244025.jpeg"
@@ -12,7 +12,7 @@ const CardImage = () => {
           delay={0.2}
         />
       </div>
-      <div className="flex flex-col h-full gap-4">
+      <div className="flex flex-col  gap-4">
         <div className="flex-1">
           <CommonCardImage
             imgSrc="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg"
