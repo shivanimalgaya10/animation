@@ -9,7 +9,7 @@ const Layout: React.FC = () => {
   const { theme} = useTheme();
   
   return (
-    <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-200'}`}>
+    <div className={`${theme === 'dark' ? 'bg-darkBackground' : 'bg-gray-200'}`}>
       <Navbar />
       <div className="container">
         <Outlet />

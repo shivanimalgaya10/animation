@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { FaEye, FaEyeSlash, FaGithub, FaTwitter } from 'react-icons/fa';
 
@@ -94,13 +94,15 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
             {/* <span className="text-sm font-medium text-gray-700">Continue with Google</span> */}
           </button>
 
-          <button
-            onClick={() => alert('Sign up with GitHub')}
+          <a
+            href="https://github.com/shivanimalgaya10"
+              target="_blank"
+  rel="noopener noreferrer"
             className=" px-4 py-2"
           >
             <FaGithub className="text-xl w-12 h-9" />
             {/* <span className="text-sm font-medium text-gray-700">Continue with GitHub</span> */}
-          </button>
+          </a>
           <button
             onClick={() => alert('Sign up with twitter')}
             className=" px-4 py-2"
