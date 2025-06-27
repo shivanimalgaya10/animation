@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 const Login: React.FC = () => {
   return (
     <div className="flex min-h-screen  items-center justify-center ">
@@ -58,9 +60,9 @@ const Login: React.FC = () => {
         </form>
         <p className="mt-3 text-sm text-center text-gray-600">
           Don't have an account?{' '}
-          <a href="#" className="text-blue-600 hover:underline">
+          <Link to="/signup" className="text-blue-600 hover:underline">
             Sign up
-          </a>
+          </Link>
         </p>
       </div>
     </div>

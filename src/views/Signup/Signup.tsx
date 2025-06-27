@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+
+import { Link } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { FaEye, FaEyeSlash, FaGithub, FaTwitter } from 'react-icons/fa';
 
@@ -110,9 +112,9 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
         <p className="mt-6 text-sm text-center text-gray-600">
           Already have an account?{' '}
-          <a href="#" className="text-blue-600 hover:underline">
+          <Link to="/login" className="text-blue-600 hover:underline">
             Log in
-          </a>
+          </Link>
         </p>
       </div>
     </div>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
+
 import { Link } from 'react-router-dom';
+import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
+
 import { useTheme } from '../../context/ThemeContext';
 
 const Navbar: React.FC = () => {
@@ -24,7 +26,7 @@ const Navbar: React.FC = () => {
       <ul className={`hidden md:flex gap-10 text-lg font-semibold text-blue-50  cursor-pointer ${
             theme === 'dark' ? 'text-white' : 'text-gray-800'
           }`}>
-        {/* <li className='hover:scale-110 transition-all duration-200'>Home</li> */}
+        <li className='hover:scale-110 transition-all duration-200'>Home</li>
         <li className='hover:scale-110 transition-all duration-200'>About</li>
         <li className='hover:scale-110 transition-all duration-200'>Contact</li>
         <li className='hover:scale-110 transition-all duration-200'>Registration</li>
